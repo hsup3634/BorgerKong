@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/cartTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="Your Cart "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/cartView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/cartView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartTitle" />
+
+    <ImageView
+        android:id="@+id/bklogo2"
+        android:layout_width="99dp"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/bklogo"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <Button
+        android:id="@+id/orderMore"
+        android:layout_width="157dp"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent2"
+        android:gravity="center|center_vertical"
+        android:text="Order More!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkOut" />
+
+    <Button
+        android:id="@+id/checkOut"
+        android:layout_width="157dp"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center|center_vertical"
+        android:text="Checkout"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/totalPriceText"
+        android:layout_width="169dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_weight="0.75"
+        android:gravity="right|center_vertical"
+        android:text="Total:   "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/orderMore"
+        app:layout_constraintEnd_toStartOf="@+id/cartTotal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cartTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:gravity="end|center_vertical"
+        android:text="$50.00  "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/orderMore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/totalPriceText" />
+
+    <ScrollView
+        android:layout_width="415dp"
+        android:layout_height="602dp"
+        app:layout_constraintBottom_toTopOf="@+id/totalPriceText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cartView">
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
